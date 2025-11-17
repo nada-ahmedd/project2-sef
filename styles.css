@@ -395,14 +395,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
-/* === Main Container (90%) === */
+
 .main-container {
   max-width: 90%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* === Products Section (السكشن الأول) === */
 .products-section {
   padding: 80px 0;
   text-align: center;
@@ -557,11 +556,12 @@ body {
   max-width: 23%;
   height: 460px;
   border-radius: 12px;
-  overflow: hidden; /* ← مهم: hidden مش visible */
+  overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  perspective: 1000px;
+  perspective: 1000px;   
 }
+
 .trending-card:hover {
   transform: translateY(-10px);
 }
@@ -590,6 +590,10 @@ body {
   border-radius: 12px 12px 0 0;
 }
 
+.card-back {
+  transform: rotateY(180deg); 
+}
+
 .card-front img,
 .card-back img {
   width: 100%;
@@ -597,10 +601,6 @@ body {
   object-fit: cover;
 }
 
-.card-back {
-  backface-visibility: visible;
- 
-}
 .card-overlay {
   position: absolute;
   top: 50%;
@@ -676,7 +676,8 @@ body {
   color: #aaa;
   margin-left: 8px;
 }
-/* === Testimonials Section === */
+
+
 .testimonials-section {
   padding: 20px 0;
   background: rgb(248, 249, 250,0.6);
@@ -702,7 +703,6 @@ body {
   line-height: 1.6;
 }
 
-/* Wrapper للأسهم + الـ carousel */
 .testimonial-carousel-wrapper {
   position: relative;
   padding: 0 60px; 
@@ -714,7 +714,6 @@ body {
   overflow: hidden;
 }
 
-/* الأسهم دلوقتي على مستوى السكشن كله */
 .carousel-arrow {
   position: absolute;
 top: 50%;  transform: translateY(-50%);
@@ -791,7 +790,6 @@ top: 50%;  transform: translateY(-50%);
 
 .testimonial-carousel-wrapper::before { left: 0; background: linear-gradient(to right, #f8f9fa, transparent); }
 .testimonial-carousel-wrapper::after { right: 0; background: linear-gradient(to left, #f8f9fa, transparent); }
-/* === You May Like Section === */
 .maylike-section {
   padding: 80px 0;
   text-align: center;
@@ -1005,7 +1003,7 @@ top: 50%;  transform: translateY(-50%);
   color: var(--accent);
 }
 
-/* === Features Section === */
+
 .features-section {
   padding: 60px 0;
   background: #fff;
@@ -1056,7 +1054,6 @@ top: 50%;  transform: translateY(-50%);
   font-size: 14px;
   color: #777;
 }
-/* === Footer === */
 .site-footer {
   background: #1a1a1a;
   color: #ccc;
